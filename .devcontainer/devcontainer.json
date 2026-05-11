@@ -1,0 +1,6 @@
+{
+  "name": "osdev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {},
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}
