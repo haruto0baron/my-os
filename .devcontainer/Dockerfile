@@ -7,6 +7,6 @@ RUN apt update && apt install -y \
     grub-pc-bin \
     xorriso \
     qemu-system-x86 \
-    make
-
+    make \
+    g++-multilib
 WORKDIR /workspace
