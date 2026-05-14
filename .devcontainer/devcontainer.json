@@ -2,10 +2,7 @@
 	"name": "MyOS-C",
 
 	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			"VARIANT": "vnc"
-		}
+		"dockerfile": "Dockerfile"
 	},
 
 	"forwardPorts": [6080],
@@ -13,9 +10,7 @@
 	"overrideCommand": false,
 
 	"containerEnv": {
-		"NOVNC_PORT": "6080",
-		"VNC_PORT": "5900",
-		"QEMU_OPTS": "-m 512M -serial stdio -vnc :0"
+		"QEMU_OPTS": "-m 512M"
 	},
 
 	"customizations": {
