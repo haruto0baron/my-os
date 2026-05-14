@@ -1,8 +1,13 @@
-void kernel_main(void) {
-    volatile char* vram = (volatile char*)0xb8000;
+void kernel_main(void)
+{
+    volatile char* vga = (volatile char*)0xB8000;
 
-    vram[0] = 'H';
-    vram[1] = 0x0f;
+    const char* msg = "Hello MyOS!";
+
+    for (int i = 0; msg[i] != '\0'; i++) {
+        vga[i * 2] = msg[i];
+        vga[i * 2 + 1] = 0x0F;
+    }
 
     while (1) {
         __asm__("hlt");
